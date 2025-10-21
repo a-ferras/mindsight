@@ -49,5 +49,32 @@ python mindsight.py
 ## License
 MIT License
 
+## Troubleshooting
+
+### Problem: `python` command not found
+On macOS, use `python3` instead:
+```sh
+python3 mindsight.py
+```
+
+### Problem: `ModuleNotFoundError: No module named 'pygame'`
+You need to install Pygame. On macOS/Homebrew Python, you may see an error about an externally managed environment. The recommended solution is to use a virtual environment:
+
+1. Create and activate a virtual environment:
+   ```sh
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+2. Install Pygame inside the virtual environment:
+   ```sh
+   pip install pygame
+   ```
+3. Run the game:
+   ```sh
+   python mindsight.py
+   ```
+
+For more details, see [PEP 668](https://peps.python.org/pep-0668/).
+
 ## Credits
 Created by Adam Ferras. Powered by Pygame.
